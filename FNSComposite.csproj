@@ -1,0 +1,310 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F88E00-0ACD-4880-A7C8-DFF1AEBB637A}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FnsComposite</AssemblyName>
+    <AssemblyOriginatorKeyFile>FnsStrongNameKey.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FnsComposite</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CallObjects\Account.cs" />
+    <Compile Include="CallObjects\Adjuster.cs" />
+    <Compile Include="CallObjects\Citation.cs" />
+    <Compile Include="CallObjects\Contact.cs" />
+    <Compile Include="CallObjects\Employee.cs" />
+    <Compile Include="CallObjects\EntityBase.cs" />
+    <Compile Include="CallObjects\IAccount.cs" />
+    <Compile Include="CallObjects\IAdjuster.cs" />
+    <Compile Include="CallObjects\ICitation.cs" />
+    <Compile Include="CallObjects\ICompany.cs" />
+    <Compile Include="CallObjects\IContact.cs" />
+    <Compile Include="CallObjects\IEmployee.cs" />
+    <Compile Include="CallObjects\IEstar.cs" />
+    <Compile Include="CallObjects\IIndependentAppraiser.cs" />
+    <Compile Include="CallObjects\IndependentAppraiser.cs" />
+    <Compile Include="CallObjects\InvolvedParty.cs" />
+    <Compile Include="CallObjects\IPerson.cs" />
+    <Compile Include="CallObjects\IRental.cs" />
+    <Compile Include="CallObjects\IRiskLocation.cs" />
+    <Compile Include="CallObjects\IStaff.cs" />
+    <Compile Include="CallObjects\Rental.cs" />
+    <Compile Include="CallObjects\RiskLocation.cs" />
+    <Compile Include="CallObjects\Role.cs" />
+    <Compile Include="CallObjects\Staff.cs" />
+    <Compile Include="ConditionalVisitor.cs" />
+    <Compile Include="CStringConverter.cs" />
+    <Compile Include="Estar.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Interfaces\IDriver.cs" />
+    <Compile Include="Interfaces\IMdClaimArchive.cs" />
+    <Compile Include="Interfaces\ISEDEmployee.cs" />
+    <Compile Include="Interfaces\ISedgwickLocationNode.cs" />
+    <Compile Include="Interfaces\ISEDVehicle.cs" />
+    <Compile Include="Interfaces\IVehicleLookup.cs" />
+    <Compile Include="JsonObject.cs" />
+    <Compile Include="MessageObjects\TranOutcome.cs" />
+    <Compile Include="MessageObjects\TranOutcomeSupport.cs" />
+    <Compile Include="Monads\Extensions.cs" />
+    <Compile Include="Monads\Monad.cs" />
+    <Compile Include="Monads\Monadic.cs" />
+    <Compile Include="NameValueVistor.cs" />
+    <Compile Include="NodeNameValueVisitor.cs" />
+    <Compile Include="SegmentObjects\AlternateNamesSegment.cs" />
+    <Compile Include="CallObjects\Asi.cs" />
+    <Compile Include="CallObjects\CallflowEvent.cs" />
+    <Compile Include="CallObjects\CallObjectBase.cs" />
+    <Compile Include="CallObjects\Carrier.cs" />
+    <Compile Include="CallObjects\IAsi.cs" />
+    <Compile Include="CallObjects\ICallflowEvent.cs" />
+    <Compile Include="CallObjects\ICarrier.cs" />
+    <Compile Include="CallObjects\IProperty.cs" />
+    <Compile Include="CallObjects\ICoverage.cs" />
+    <Compile Include="CallObjects\IVendorReferral.cs" />
+    <Compile Include="CallObjects\IWitness.cs" />
+    <Compile Include="CallObjects\Property.cs" />
+    <Compile Include="CallObjects\Coverage.cs" />
+    <Compile Include="CallObjects\IWebNavigation.cs" />
+    <Compile Include="CallObjects\ThirdParty.cs" />
+    <Compile Include="CallObjects\VendorReferral.cs" />
+    <Compile Include="CallObjects\WebNavigation.cs" />
+    <Compile Include="CallObjects\Witness.cs" />
+    <Compile Include="LogMessage.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="PolicyLoader.cs" />
+    <Compile Include="SegmentObjects\AccountUserSegment.cs" />
+    <Compile Include="SegmentObjects\AHSExtSegment.cs" />
+    <Compile Include="CallObjects\Address.cs" />
+    <Compile Include="CallObjects\Branch.cs" />
+    <Compile Include="CallObjects\Caller.cs" />
+    <Compile Include="CallObjects\Claim.cs" />
+    <Compile Include="CallObjects\Driver.cs" />
+    <Compile Include="CallObjects\IAddress.cs" />
+    <Compile Include="CallObjects\IBranch.cs" />
+    <Compile Include="CallObjects\ICaller.cs" />
+    <Compile Include="CallObjects\ICallObject.cs" />
+    <Compile Include="CallObjects\IClaim.cs" />
+    <Compile Include="CallObjects\IDriver.cs" />
+    <Compile Include="CallObjects\IInsured.cs" />
+    <Compile Include="CallObjects\ILossLocation.cs" />
+    <Compile Include="CallObjects\Insured.cs" />
+    <Compile Include="CallObjects\IOwner.cs" />
+    <Compile Include="CallObjects\IPassenger.cs" />
+    <Compile Include="CallObjects\IPolicy.cs" />
+    <Compile Include="CallObjects\IVehicle.cs" />
+    <Compile Include="CallObjects\LossLocation.cs" />
+    <Compile Include="CallObjects\Owner.cs" />
+    <Compile Include="CallObjects\Passenger.cs" />
+    <Compile Include="CallObjects\Policy.cs" />
+    <Compile Include="CallObjects\Vehicle.cs" />
+    <Compile Include="Interfaces\IComposite.cs" />
+    <Compile Include="Interfaces\IListBoxRecord.cs" />
+    <Compile Include="ListBoxRecord.cs" />
+    <Compile Include="MessageObjects\LogMessage.cs" />
+    <Compile Include="MessageObjects\Message.cs" />
+    <Compile Include="SegmentObjects\AgentSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\AhsPolicySegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\AhsSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CallObjects\CallObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\BranchSegment.cs" />
+    <Compile Include="SegmentObjects\CarrierSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassGen.cs" />
+    <Compile Include="Composite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CompositeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CompositeFactory.cs" />
+    <Compile Include="CompositeLeaf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbClassGen.cs" />
+    <Compile Include="DbProperty.cs" />
+    <Compile Include="SegmentObjects\ContactSegment.cs" />
+    <Compile Include="SegmentObjects\DepartmentCodeSegment.cs" />
+    <Compile Include="SegmentObjects\DriverSegment.cs" />
+    <Compile Include="SegmentObjects\JurisdictionStateSegment.cs" />
+    <Compile Include="SegmentObjects\MdClaimArchiveSegment.cs" />
+    <Compile Include="SegmentObjects\SEDAhsSegment.cs" />
+    <Compile Include="SegmentObjects\LocationCodeSegment.cs" />
+    <Compile Include="SegmentObjects\EmployeeExtSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\EmployeeSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IAccountHierarchyStep.cs" />
+    <Compile Include="Interfaces\IAgent.cs" />
+    <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\IEntityObject.cs" />
+    <Compile Include="Interfaces\IPolicy.cs" />
+    <Compile Include="Interfaces\ITranOutcomeStep.cs" />
+    <Compile Include="Interfaces\ITransmissionOutcome.cs" />
+    <Compile Include="Interfaces\IVehicle.cs" />
+    <Compile Include="MessageObjects\IMessageObject.cs" />
+    <Compile Include="MessageObjects\IMessageObjectFactory.cs" />
+    <Compile Include="MessageObjects\MessageObject.cs" />
+    <Compile Include="MessageObjects\MessageObjectFactory.cs" />
+    <Compile Include="MessageObjects\Outcome.cs" />
+    <Compile Include="MessageObjects\OutcomeStep.cs" />
+    <Compile Include="MessageObjects\Subscription.cs" />
+    <Compile Include="OverFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\LocationUserSegment.cs" />
+    <Compile Include="SegmentObjects\PolicyExtSegment.cs" />
+    <Compile Include="SegmentObjects\PolicySegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Property.cs" />
+    <Compile Include="RegExprExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SegmentObjects\SEDEmployeeSegment.cs" />
+    <Compile Include="SegmentObjects\SedgwickLocationNodeSegment.cs" />
+    <Compile Include="SegmentObjects\SEDVehicleSegment.cs" />
+    <Compile Include="SegmentObjects\Segment.cs" />
+    <Compile Include="SegmentObjects\SpecificDestinationSegment.cs" />
+    <Compile Include="SegmentObjects\SpecificDestSeqStepSegment.cs" />
+    <Compile Include="SegmentObjects\UserGroupSegment.cs" />
+    <Compile Include="SegmentObjects\UserSegment.cs" />
+    <Compile Include="SegmentObjects\VehicleLookupSegment.cs" />
+    <Compile Include="SegmentObjects\VehicleSegment.cs" />
+    <Compile Include="Monads\Tuple.cs" />
+    <Compile Include="UntouchedVisitor.cs" />
+    <Compile Include="VisitorBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlLeaf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Composite.cd" />
+    <None Include="FnsStrongNameKey.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

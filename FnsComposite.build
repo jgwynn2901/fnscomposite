@@ -1,0 +1,47 @@
+<project name="FnsComposite" default="rebuild" basedir=".">
+    <property name="nunit.dir" value="C:\Program Files\NUnit 2.2.6\bin" />
+    
+    <target name="all" depends="clean, build, runTestReport"/>
+
+    <target name="clean" description="Delete all previously compiled binaries.">
+        <delete>
+            <fileset>
+                <include name="**/bin/**" />
+                <include name="**/obj/**" />
+                <include name="**/*.suo" />
+                <include name="**/*.user" />
+				<include name="../../bin/FnsComposite.*" />
+            </fileset>
+        </delete>
+    </target>
+    
+    <target name="build" description="Build all targets.">
+        <call target="build.FnsComposite"/>
+    </target>
+    
+    <target name="rebuild" depends="clean, build" />
+
+    <target name="build.FnsComposite">
+        <solution configuration="${configuration}" solutionfile="FnsComposite.sln" />
+        <property name="expected.output" value="${bin.dir}/FnsComposite.dll"/>
+        <fail unless="${file::exists(expected.output)}">Output file doesn't exist in ${expected.output}</fail>
+    </target>
+    
+    <target name="runTest">
+		<exec 
+			program="${nunit.dir}\nunit-console.exe" 
+			workingdir="${bin.dir}" 
+			commandline="FnsComposite.dll /thread /xml=FnsComposite.Testing.dll-results.xml"/>
+	</target>
+	
+	<target name="runTestReport" depends="runTest">
+
+		<nunit2report todir="${report.dir}">
+    			<fileset>
+				<include name="${bin.dir}\FnsComposite.Testing.dll-results.xml" />
+		    	</fileset>
+		</nunit2report>
+
+	</target>
+    
+</project>
